@@ -46,9 +46,9 @@ stages:
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/azinfra/Environment/dev'
         backendServiceArm: 'amiteshserviceconnection'
-        backendAzureRmStorageAccountName: 'pkdgstorage'
-        backendAzureRmContainerName: 'pkdgcontainer'
-        backendAzureRmKey: 'terraform.tfstate'
+        backendAzureRmStorageAccountName: 'azstoragepk'
+        backendAzureRmContainerName: 'pkcont'
+        backendAzureRmKey: 'dev.terraform.tfstate'
 
     - task: TerraformTask@5
       inputs:
@@ -70,9 +70,9 @@ stages:
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/azinfra/Environment/dev'
         backendServiceArm: 'amiteshserviceconnection'
-        backendAzureRmStorageAccountName: 'pkdgstorage'
-        backendAzureRmContainerName: 'pkdgcontainer'
-        backendAzureRmKey: 'terraform.tfstate'
+        backendAzureRmStorageAccountName: 'azstoragepk'
+        backendAzureRmContainerName: 'pkcont'
+        backendAzureRmKey: 'dev.terraform.tfstate'
 
     - task: TerraformTask@5
       inputs:
