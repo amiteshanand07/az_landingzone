@@ -5,6 +5,13 @@ terraform {
       version = "4.44.0"
     }
   }
+backend "azurerm" {
+    resource_group_name  = "dev-rg"        # replace with your RG
+    storage_account_name = "azstoragepk"                # your storage account
+    container_name       = "pkcont"             # your blob container
+    key                  = "dev.terraform.tfstate"         # state file name
+    use_azuread_auth     = true                          # use Azure AD authentication
+  }
 }
 
 provider "azurerm" {
