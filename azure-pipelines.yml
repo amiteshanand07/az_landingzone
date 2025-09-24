@@ -68,7 +68,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'init'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/dev'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/azinfra/Environment/dev'
         backendServiceArm: 'amiteshserviceconnection'
         backendAzureRmStorageAccountName: 'pkdgstorage'
         backendAzureRmContainerName: 'pkdgcontainer'
@@ -78,5 +78,5 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'apply'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/Environment/dev'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/azinfra/Environment/dev'
         environmentServiceNameAzureRM: 'amiteshserviceconnection'
