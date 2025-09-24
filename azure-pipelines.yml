@@ -40,13 +40,6 @@ stages:
   jobs:
   - job: TerraformInitandPlanJob
     steps:
-
-    - task: TerraformTask@5
-      inputs:
-        provider: 'azurerm'
-        command: 'init'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/azinfra/Environment/dev'
-        commandOptions: 'terraform init -upgrade'
     - task: TerraformTask@5
       inputs:
         provider: 'azurerm'
